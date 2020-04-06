@@ -26,7 +26,7 @@ options cmplib=work.fcmp;
 
 /* Calling FCMP function from data step */
 data work.hmeq_scored;
-	set work._excelexport;
+	set work.IMPORTED_DATA;
 	scored_bad = Score_Python(CLAGE, CLNO, DEBTINC, DELINQ, DEROG, LOAN, MORTDUE, NINQ, VALUE, YOJ);
 	put scored_bad=;
 run;
